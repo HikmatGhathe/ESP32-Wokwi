@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Hekmat Ghaith",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 0.3, "left": -139.8, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 62, "left": 214.3, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -3.6, "left": 167, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v9.6", "h0.1", "v124.8", "h249.6", "v-38.4" ] ],
+    [ "sw1:2", "esp:4", "green", [ "v0" ] ],
+    [ "led1:A", "esp:2", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
