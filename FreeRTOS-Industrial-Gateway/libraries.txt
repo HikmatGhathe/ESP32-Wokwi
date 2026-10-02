@@ -1,0 +1,6 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+dhtESP32-rmt
+PubSubClient
+DHT sensor library for ESPx
